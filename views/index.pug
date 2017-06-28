@@ -1,0 +1,41 @@
+extends ./layout.pug
+
+block title
+  title #{lang.iglink} #{brand}
+  meta(property='og:title' content='' + lang.iglink + ' - ' + brand)
+  meta(property='og:site_name' content='' + lang.iglink + ' - ' + brand)
+  meta(name='og:image' content='' + avatarhd)
+  meta(name='twitter:image' content='' + avatarhd)
+  meta(name='twitter:url' content='http://iglink.co/' + brand)
+
+block content
+  script
+    | var brand = "#{brand}";
+
+  nav(class="navbar navbar-default navbar-fixed-top")
+    div(class='container')
+      ul(class='nav navbar-nav')
+        li
+          a(href='http://instagram.com/' + brand class='navbar-brand')
+            img(src='' + avatar class='img-circle' alt='http://instagram.com/' + brand)
+        li
+          a(href='http://instagram.com/' + brand class='navbar-brand-name') #{brand}
+      ul(class='nav navbar-nav navbar-right hidden-xs')
+        li
+          a(href='http://iglink.co') iglink
+  div(class='container fixed-top' id='posts-container')
+    div(class='row')
+      div(class='col-md-12 text-center p-y-20') #{lang.redirection_title}
+    
+    div(class='row')
+      div(class='col-md-12 text-center p-y-20')
+        script(type='text/javascript').
+          url="http://code.altpubli.com/index.php?idcanal=2779&lgid="+((new Date()).getTime() % 2147483648) + Math.random();
+          if (typeof iwadserverbanner == "function") iwadserverbanner(url, "");
+        noscript
+          a(href='http://code.altpubli.com/click_noscript.php?idcanal=2779')
+            img(src='http://code.altpubli.com/index.php?idcanal=2779')
+    div(id='posts')
+      
+
+  script ga('send', 'event', 'redirection', 'redirection_success', '#{brand}');
