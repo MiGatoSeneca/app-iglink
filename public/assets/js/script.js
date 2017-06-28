@@ -3,7 +3,9 @@ var apiPath = "https://api-iglink.azurewebsites.net";
 var wwwPath = "https://www.iglink.co";
 var adminPath = "https://admin.iglink.co";
 
-if(document.location.origin != "https://iglink.co"){
+console.log("done...");
+
+if(document.location.origin == "http://localhost:3000"){
   appPath = "http://localhost:3000";
   apiPath = "http://localhost:3001";
   wwwPath = "http://localhost:3002";
@@ -38,7 +40,7 @@ function getPosts(max_id){
         $("#posts").append(html);
         posts_count++;
       }
-      //getPosts(data.last_id);
+      getPosts(data.last_id);
     }
   });
 }
