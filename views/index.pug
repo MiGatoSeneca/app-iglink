@@ -29,13 +29,14 @@ block content
     
     div(class='row')
       div(class='col-md-12 text-center p-y-20')
-        script(type="text/javascript" src="https://code.altpubli.com/iwadserver.js")
-        script(type='text/javascript').
-          url="https://code.altpubli.com/index.php?idcanal=2779&lgid="+((new Date()).getTime() % 2147483648) + Math.random();
-          if (typeof iwadserverbanner == "function") iwadserverbanner(url, "");
-        noscript
-          a(href='https://code.altpubli.com/click_noscript.php?idcanal=2779')
-            img(src='https://code.altpubli.com/index.php?idcanal=2779')
+        //
+          script(type="text/javascript" src="https://code.altpubli.com/iwadserver.js")
+          script(type='text/javascript').
+            url="https://code.altpubli.com/index.php?idcanal=2779&lgid="+((new Date()).getTime() % 2147483648) + Math.random();
+            if (typeof iwadserverbanner == "function") iwadserverbanner(url, "");
+          noscript
+            a(href='https://code.altpubli.com/click_noscript.php?idcanal=2779')
+              img(src='https://code.altpubli.com/index.php?idcanal=2779')
     div(id='posts')
       
 
