@@ -3,9 +3,7 @@ var apiPath = "https://api-iglink.azurewebsites.net";
 var wwwPath = "https://www.iglink.co";
 var adminPath = "https://admin.iglink.co";
 
-console.log("done...");
-
-if(document.location.origin == "http://localhost:3000"){
+if(document.location.origin != "https://iglink.co"){
   appPath = "http://localhost:3000";
   apiPath = "http://localhost:3001";
   wwwPath = "http://localhost:3002";
@@ -31,33 +29,15 @@ function getPosts(max_id){
     },
     success: function(data) {
       for ( var post of data.posts){
-
         var html = "";
-        html += "<div class='col-md-4 col-xs-4 text-center p-15 p-xs-5 fade-in postblock'>";
-        html += " <a href='javascript:redirection(\""+post.url+"\",\"post\",\""+post.id+"\")'><img src='"+post.thumbnail_src+"' class='width-100per' alt='Link #"+post.count+" "+data.brand+"'></a>";
+        html += "<div class='col-md-4 col-xs-4 text-center p-15 p-xs-5 fade-in'>";
+        html += " <a href='javascript:redirection(\""+post.url+"\",\"post\",\""+post.id+"\")'>";
+        html += "   <img src='"+post.thumbnail_src+"' class='width-100per' alt='Link #"+post.count+" "+data.brand+"'>";
+        html += " </a>";
         html += "</div>";
         $("#posts").append(html);
         posts_count++;
-
-
-        if((posts_count == 6)){
-          var html = "";
-          html += "<div class='col-md-12 col-xs-12 text-center fade-in adblock'>";
-          html += " <p class='small'>ANUNCIO</p>";
-          html += $("#mobusi-banner").html();
-          html += "</div>";
-          $("#posts").append(html);
-        }
-        if((posts_count == 18)){
-          var html = "";
-          html += "<div class='col-md-12 col-xs-12 text-center fade-in adblock'>";
-          html += " <p class='small'>ANUNCIO</p>";
-          html += $("#mobusi-banner-2").html();
-          html += "</div>";
-          $("#posts").append(html);
-        }
       }
-
       //getPosts(data.last_id);
     }
   });
@@ -81,11 +61,6 @@ function redirection(url,clickType,clickId){
   window.location.href=url;
 }
 
-setTimeout(
-  function() {
-    $("body").addClass("show-interstitials");
-   },
-   5000);
 
 ga('send', 'event', 'visit', 'visit_success', brand);
 
@@ -100,11 +75,3 @@ $.ajax({
     ga('send', 'event', 'server', 'visitAdd_success', brand);
   }
 });
-function showDirectLinks(){
-  $("#direct-links-panel").slideDown("slow");
-
-}
-function hideDirectLinks(){
-  $("#direct-links-panel").slideUp("slow");
-
-}

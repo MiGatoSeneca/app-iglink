@@ -12,9 +12,19 @@ block content
   script
     | var brand = "#{brand}";
 
-  div(id='direct-links-panel')
-      a(href="#") Title
+  div(id='direct-links-panel' class='p-50 p-t-100')
+    div(class="m-b-20")
+      a(href='javascript:hideDirectLinks()' class='btn btn-block btn-outline') Links Instagram
+    div(class="m-b-20")
+      a(href='javascript:hideDirectLinks()' class='btn btn-block btn-outline') Ver más links
+    div(class="m-b-20")
+      a(href='javascript:hideDirectLinks()' class='btn btn-block btn-outline') Ver más links
+    div(class="m-b-20")
+      a(href='javascript:hideDirectLinks()' class='btn btn-block btn-outline') Ver más links
+    div(class="m-b-20")
+      a(href='javascript:hideDirectLinks()' class='btn btn-block btn-outline') Ver más links
       
+        
   nav(class="navbar navbar-default navbar-fixed-top")
     div(class='container')
       ul(class='nav navbar-nav')
@@ -43,7 +53,7 @@ block content
     div(id='posts' class='row')    
 
     footer(class='footer-bar')
-      a(href='javascript:showDirectLinks()' class='btn btn-outline-secondary') Ver más links
+      a(href='javascript:showDirectLinks()' class='btn btn-outline') Links destacados
     
     
 
