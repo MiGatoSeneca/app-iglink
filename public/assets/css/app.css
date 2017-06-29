@@ -32,9 +32,6 @@ h4{
   color:white;
 }
 
-.fixed-top{
-  padding-top:70px;
-}
 
 .p-0{
   padding:0px;
@@ -833,14 +830,13 @@ h4{
 }
 
 #direct-links-panel{
-  *display:none;
-  position: fixed;
   height: 100%;
   width:100%;
   background-color:#fff;
   z-index: 100;
   bottom:0px;
   overflow-x: auto;
+  margin-top:105px;
 }
 #direct-links-panel div{
   margin-bottom: 20px;
@@ -858,7 +854,43 @@ h4{
 .footer-bar .btn-outline{
   border:0px;
   color:#000;
+}
 
+.navsubbar{
+  position: fixed;
+  width:100%;
+  top:65px;
+  height:42px;
+  background-color: #f4f4f4;
+  border:none;
+  z-index: 1000
+}
+.nav-tabs{
+  background-color:#fff;
+  border:none;
+}
+.nav-tabs>li{
+  width:50%;
+  text-align: center;
+  margin:0px;
+  padding: 0px;
+}
+.nav-tabs>li>a{
+  color:#999;
+  margin:0px;
+}
+.nav-tabs>li.active>a, .nav-tabs>li.active>a:focus, .nav-tabs>li.active>a:hover {
+  border:none;
+  border-radius: 0px;
+  color: #000;
+  cursor: default;
+  background-color: #fff;
+  border: 0px;
+  border-bottom: 2px solid #000;
+}
+
+.tab-content{
+  margin-top:106px;
 }
 
 .bg-instagram {

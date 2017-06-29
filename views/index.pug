@@ -12,48 +12,53 @@ block content
   script
     | var brand = "#{brand}";
 
-  div(id='direct-links-panel' class='bg-instagram p-50 p-t-100')
-    div
-      a(href='javascript:hideDirectLinks()' class='btn btn-block btn-outline') Lorem ipsum dolor sit amet
-    div
-      a(href='javascript:hideDirectLinks()' class='btn btn-block btn-outline') Lorem ipsum dolor sit amet Lorem ipsum dolor sit amet Lorem ipsum dolor sit amet
-    div
-      a(href='javascript:hideDirectLinks()' class='btn btn-block btn-outline') Ver más links
-    div
-      a(href='javascript:hideDirectLinks()' class='btn btn-block btn-outline') Ver más links
       
-        
+      
   nav(class="navbar navbar-default navbar-fixed-top")
     div(class='container')
-      ul(class='nav navbar-nav')
-        li
-          a(href='http://instagram.com/' + brand class='navbar-brand')
-            img(src='' + avatar class='img-circle' alt='http://instagram.com/' + brand)
-        li
-          a(href='http://instagram.com/' + brand class='navbar-brand-name') #{brand}
-      ul(class='nav navbar-nav navbar-right hidden-xs')
-        li
-          a(href='http://iglink.co') iglink
-  div(class='container fixed-top' id='posts-container')
-    div(class='row')
-      div(class='col-md-12 text-center p-y-20') #{lang.redirection_title}
-      
+      div(class="row")
+        div(class="col-md-12")
+          ul(class='nav navbar-nav')
+            li
+              a(href='http://instagram.com/' + brand class='navbar-brand')
+                img(src='' + avatar class='img-circle' alt='http://instagram.com/' + brand)
+            li
+              a(href='http://instagram.com/' + brand class='navbar-brand-name') #{brand}
+          ul(class='nav navbar-nav navbar-right hidden-xs')
+            li
+              a(href='http://iglink.co') iglink
+  div(class="navsubbar")
+    ul(class="nav nav-tabs")
+      li(class="active")
+        a(data-toggle="tab" href="#direct-links" class="active") Destacados
+      li(class="")
+        a(data-toggle="tab" href="#post-links") Enlaces Intagram
+    
+  div(id="mobusi-ads")
     div(class='hidden' id='mobusi-banner')
       script(language='javascript' type='text/javascript' src="https://ocio.leadzutw.com/banner_request.php?m=1J1DSITE83125X2&a=&idtm=300x250&lgid="+new Date().getTime())
-    
     div(class='hidden' id='mobusi-banner-2')
       script(language='javascript' type='text/javascript' src="https://ocio.leadzutw.com/banner_request.php?m=1J1DSITE83125X4&a=&idtm=300x450&lgid="+new Date().getTime())
-    
     div(class='hidden' id='mobusi-interstitials')
       script(language='javascript' type='text/javascript' src ="https://ocio.leadzutw.com/inter_request.php?m=1J1DSITE83125X1&a=&img=1&lgid="+((new Date()).getTime() %2147483648) + Math.random())
 
+  div(class="tab-content")
+    div(id="direct-links" class="tab-pane fade in active")
+      div(id='direct-links-panel' class='bg-instagram p-50 p-t-100')
+        div
+          a(href='javascript:hideDirectLinks()' class='btn btn-block btn-outline') Lorem ipsum dolor sit amet
+        div
+          a(href='javascript:hideDirectLinks()' class='btn btn-block btn-outline') Lorem ipsum dolor sit amet Lorem ipsum dolor sit amet Lorem ipsum dolor sit amet
+        div
+          a(href='javascript:hideDirectLinks()' class='btn btn-block btn-outline') Ver más links
+        div
+          a(href='javascript:hideDirectLinks()' class='btn btn-block btn-outline') Ver más links
+    div(id="post-links" class="tab-pane fade in")
+      div(class='container fixed-top' id='posts-container')
+        div(class='row')
+          div(class='col-md-12 text-center p-y-20') #{lang.redirection_title}
+        div(id='posts' class='row p-b-100')    
 
-    div(id='posts' class='row p-b-100')    
-
-    footer(class='footer-bar')
-      a(href='javascript:hideDirectLinks()' class='btn btn-outline btn-block')
-        | Ver Enlaces Instagram
-    
     
 
 
