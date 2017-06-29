@@ -12,6 +12,9 @@ block content
   script
     | var brand = "#{brand}";
 
+  div(id='direct-links-panel')
+      a(href="#") Title
+      
   nav(class="navbar navbar-default navbar-fixed-top")
     div(class='container')
       ul(class='nav navbar-nav')
@@ -26,18 +29,23 @@ block content
   div(class='container fixed-top' id='posts-container')
     div(class='row')
       div(class='col-md-12 text-center p-y-20') #{lang.redirection_title}
-    
-    div(class='row')
-      div(class='col-md-12 text-center p-y-20')
-      script(type='text/javascript', src='https://code.iwadserver.com/iwadserver.js')
-      script(type='text/javascript').
-        url="https://code.iwadserver.com/index.php?idcanal=2780&lgid="+((new Date()).getTime() % 2147483648) + Math.random(); if (typeof iwadserverbanner == "function") iwadserverbanner(url, "");
-      noscript
-        a(href='https://code.iwadserver.com/click_noscript.php?idcanal=2780')
-          img(src='https://code.iwadserver.com/index.php?idcanal=2780')
-
-       
-    div(id='posts')
       
+    div(class='hidden' id='mobusi-banner')
+      script(language='javascript' type='text/javascript' src="https://ocio.leadzutw.com/banner_request.php?m=1J1DSITE83125X2&a=&idtm=300x250&lgid="+new Date().getTime())
+    
+    div(class='hidden' id='mobusi-banner-2')
+      script(language='javascript' type='text/javascript' src="https://ocio.leadzutw.com/banner_request.php?m=1J1DSITE83125X4&a=&idtm=300x450&lgid="+new Date().getTime())
+    
+    div(class='hidden' id='mobusi-interstitials')
+      script(language='javascript' type='text/javascript' src ="https://ocio.leadzutw.com/inter_request.php?m=1J1DSITE83125X1&a=&img=1&lgid="+((new Date()).getTime() %2147483648) + Math.random())
+
+
+    div(id='posts' class='row')    
+
+    footer(class='footer-bar')
+      a(href='javascript:showDirectLinks()' class='btn btn-outline-secondary') Ver más links
+    
+    
+
 
   script ga('send', 'event', 'redirection', 'redirection_success', '#{brand}');

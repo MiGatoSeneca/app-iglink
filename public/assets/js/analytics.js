@@ -3,9 +3,11 @@
 m=s.getElementsByTagName(o)[0];a.async=1;a.src=g;m.parentNode.insertBefore(a,m)
 })(window,document,'script','https://www.google-analytics.com/analytics.js','ga');
 
-if(document.location.hostname != "localhost"){
+if((document.location.hostname != "localhost")&&(document.location.hostname != "app-iglink.azurewebsites.net")){
   ga('create', 'UA-90461818-1', 'auto');
 }else{
   ga('create', 'UA-90461818-2', 'auto');
 }
 ga('send', 'pageview');
+
+console.log(document.location.hostname);
