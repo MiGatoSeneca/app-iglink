@@ -58,7 +58,7 @@ function getPosts(max_id){
         }
       }
 
-      //getPosts(data.last_id);
+      getPosts(data.last_id);
     }
   });
 }

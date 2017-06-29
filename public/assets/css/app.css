@@ -834,8 +834,6 @@ h4{
   width:100%;
   z-index: 100;
   bottom:0px;
-  overflow-x: auto;
-  margin-top:105px;
 }
 #direct-links-panel div{
   margin-bottom: 20px;
@@ -859,7 +857,6 @@ h4{
   position: fixed;
   width:100%;
   top:65px;
-  height:42px;
   background-color: #f4f4f4;
   border:none;
   z-index: 1000
@@ -875,8 +872,11 @@ h4{
   padding: 0px;
 }
 .nav-tabs>li>a{
+  height:42px;
   color:#999;
   margin:0px;
+  border: 0px;
+  border-bottom: 2px solid #fff;
 }
 .nav-tabs>li.active>a, .nav-tabs>li.active>a:focus, .nav-tabs>li.active>a:hover {
   border:none;
@@ -887,13 +887,23 @@ h4{
   border: 0px;
   border-bottom: 2px solid #000;
 }
+.nav-tabs>li>a:focus, .nav-tabs>li>a:hover {
+  color: #000;
+  border-radius: 0px;
+  background-color: #fff;
+  border-bottom: 2px solid #fff;
+}
 
 .tab-content{
-  margin-top:106px;
-  min-height: 100%;
+  height: calc(100% - 106px);
+  position: absolute;
+  top:106px;
+  background-color: #fff;
+
 }
 .tab-content .tab-pane{
-  min-height: 100%;
+  height: 100%;
+  overflow-x: auto;
 }
 
 .bg-instagram {
