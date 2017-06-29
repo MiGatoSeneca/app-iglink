@@ -102,9 +102,11 @@ $.ajax({
 });
 function showDirectLinks(){
   $("#direct-links-panel").slideDown("slow");
+  $(".footer-bar").html('<a class="btn btn-block btn-outline" href="javascript:hideDirectLinks()">Ver Enlaces Instagram</a>');
 
 }
 function hideDirectLinks(){
   $("#direct-links-panel").slideUp("slow");
+  $(".footer-bar").html('<a class="btn btn-outline btn-block" href="javascript:showDirectLinks()">Ver Enlaces Destacados</a>');
 
 }

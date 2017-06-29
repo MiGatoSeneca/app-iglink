@@ -713,6 +713,7 @@ h4{
   background-color:#fff;
   height:65px;
 }
+
 .footer-bar{
   position: fixed;
   bottom: 0px;
@@ -723,6 +724,7 @@ h4{
   height: 65px;
   text-align:center;
   padding:10px;
+  z-index: 1000;
 }
 
 
@@ -838,16 +840,29 @@ h4{
   background-color:#fff;
   z-index: 100;
   bottom:0px;
-
+  overflow-x: auto;
+}
+#direct-links-panel div{
+  margin-bottom: 20px;
 }
 .btn-outline{
-  border:1px solid #000;
+  border:2px solid #fff;
   padding:10px;
-  text-transform: uppercase;
+  font-size: 14px;
   border-radius: 0px;
-  color:#000;
-  font-weight: 600
+  font-weight: 600;
+  white-space:normal;
+  color:white;
+}
 
+.footer-bar .btn-outline{
+  border:0px;
+  color:#000;
+
+}
+
+.bg-instagram {
+    background: radial-gradient(circle at 0% 100%, #FED373 4%, #F15245 30%, #D92E7F 62%, #9B36B7 85%, #515ECF);
 }
 
 @-webkit-keyframes fadeIn { from { opacity:0; opacity: 1\9; /* IE9 only */ } to { opacity:1; } }
